@@ -2,8 +2,8 @@ name: Job Crawler
 
 on:
   schedule:
-    - cron: "0 1 * * *"  # 每天 UTC 01:00 = JST 10:00
-  workflow_dispatch:      # 也可以手動觸發
+    - cron: "0 1 * * *"
+  workflow_dispatch:
 
 jobs:
   crawl:
