@@ -51,7 +51,7 @@ def _parse_hit(hit: dict) -> Job:
         source="japan_dev",
         title=hit["title"],
         company=hit["company_name"],
-        url=f"{JOB_BASE_URL}/{hit['slug']}",
+        url=f"{JOB_BASE_URL}/{hit['company']['slug']}/{hit['slug']}",
         location=hit.get("location"),
         salary_min=hit.get("salary_min"),
         salary_max=hit.get("salary_max"),
