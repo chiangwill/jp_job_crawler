@@ -1,16 +1,14 @@
 japan_dev:
   filters:
     visa_only: true
-    skill_names: [Python]
-    # japanese_level_enum: [japanese_level_not_required]
-    # remote_level: [remote_level_full, remote_level_partial]
-    # candidate_location: [candidate_location_anywhere]
-    # seniority_level: [seniority_level_senior, seniority_level_mid_level]
+    skill_names: [Python, Backend]
+    japanese_level_enum: [japanese_level_not_required]
+    candidate_location: [candidate_location_anywhere]
+    seniority_level: [seniority_level_mid_level, seniority_level_senior]
 
 tokyo_dev:
   filters:
     japanese_requirement: [none]
     applicant_location: [apply_from_abroad]
-    category: [python]
-    # remote_policy: [fully_remote, partially_remote]
-    # seniority: [senior, intermediate]
+    category: [python, backend]
+    seniority: [intermediate, senior]
