@@ -22,9 +22,13 @@ def main():
     print(f"  → {len(japan_dev_jobs)} jobs fetched")
 
     print("Fetching Tokyo Dev...")
-    td_filters = config["tokyo_dev"]["filters"]
-    tokyo_dev_jobs = fetch_tokyo_dev(**td_filters)
-    print(f"  → {len(tokyo_dev_jobs)} jobs fetched")
+    try:
+        td_filters = config["tokyo_dev"]["filters"]
+        tokyo_dev_jobs = fetch_tokyo_dev(**td_filters)
+        print(f"  → {len(tokyo_dev_jobs)} jobs fetched")
+    except Exception as e:
+        print(f"  → Failed: {e}")
+        tokyo_dev_jobs = []
 
     all_jobs = japan_dev_jobs + tokyo_dev_jobs
 
